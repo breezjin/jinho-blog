@@ -106,7 +106,7 @@ const propertyLastEditedTimeValue = (
   defaultFn: () => React.ReactNode
 ) => {
   if (pageHeader && block?.last_edited_time) {
-    return `Last updated ${formatDate(block?.last_edited_time, {
+    return `Last updated : ${formatDate(block?.last_edited_time, {
       month: 'long'
     })}`
   }
@@ -122,7 +122,7 @@ const propertyDateValue = (
     const publishDate = data?.[0]?.[1]?.[0]?.[1]?.start_date
 
     if (publishDate) {
-      return `${formatDate(publishDate, {
+      return `Created : ${formatDate(publishDate, {
         month: 'long'
       })}`
     }
