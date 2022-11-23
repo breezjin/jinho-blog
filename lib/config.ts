@@ -5,8 +5,8 @@
  * for optional depenencies.
  */
 import { parsePageId } from 'notion-utils'
-import type posthog from 'posthog-js'
 
+// import type posthog from 'posthog-js'
 import { getEnv, getSiteConfig } from './get-config-value'
 import { NavigationLink } from './site-config'
 import {
@@ -168,9 +168,13 @@ export const fathomConfig = fathomId
   : undefined
 
 export const posthogId = process.env.NEXT_PUBLIC_POSTHOG_ID
-export const posthogConfig: posthog.Config = {
+export const posthogConfig = {
   api_host: 'https://app.posthog.com'
 }
+// export const posthogConfig: posthog.Config = {
+//   api_host: 'https://app.posthog.com'
+// }
+// export const posthogConfig = 'https://app.posthog.com'
 
 function cleanPageUrlMap(
   pageUrlMap: PageUrlOverridesMap,
