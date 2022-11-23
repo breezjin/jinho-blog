@@ -16,7 +16,7 @@ export default siteConfig({
   author: 'Yoon Jinho (a.k.a breezjin or Mike)',
 
   // open graph metadata (optional)
-  description: '개인 블로그 입니다.',
+  description: 'Jinho 개인 블로그 입니다.',
 
   // social usernames (optional)
   twitter: 'dreamer05',
