@@ -50,8 +50,10 @@
 
 .notion-gallery-grid {
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  grid-gap: 6vmin;
-  gap: 6vmin;
+  grid-auto-rows: 0fr;
+  grid-gap: 4vmin;
+  gap: 4vmin;
+  padding: 2rem 0 0 0;
 }
 
 .notion-gallery-grid .notion-page-icon-inline {
@@ -156,9 +158,12 @@
   }
 }
 
+/***
+모바일에서 우측으로 밀리는 부분이 있어서 주석처리
 .notion-page-content > article {
   padding-right: 2rem;
 }
+***/
 
 .notion-aside-table-of-contents {
   align-items: flex-start;
