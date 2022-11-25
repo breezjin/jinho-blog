@@ -22,6 +22,7 @@ export default siteConfig({
   twitter: 'dreamer05',
   github: 'breezjin',
   linkedin: 'yoonjinho',
+  instagram: 'breezjin',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
