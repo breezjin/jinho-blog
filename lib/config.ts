@@ -110,6 +110,11 @@ export const navigationLinks: Array<NavigationLink | null> = getSiteConfig(
   null
 )
 
+export const disqusShortname: string | null = getSiteConfig(
+  'disqusShortname',
+  null
+)
+
 // Optional site search
 export const isSearchEnabled: boolean = getSiteConfig('isSearchEnabled', true)
 

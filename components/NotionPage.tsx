@@ -27,6 +27,7 @@ import { Page404 } from './Page404'
 import { PageAside } from './PageAside'
 import { PageHead } from './PageHead'
 import styles from './styles.module.css'
+import { DiscussionEmbed } from 'disqus-react';
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
@@ -242,6 +243,14 @@ export const NotionPage: React.FC<types.PageProps> = ({
     getPageProperty<string>('Description', block, recordMap) ||
     config.description
 
+  const disqus =<DiscussionEmbed
+    shortname={config.disqusShortname}
+    config={ {
+      url: (canonicalPageUrl ? canonicalPageUrl : ""),
+      title: title
+    } }
+  />
+
   return (
     <>
       <PageHead
@@ -278,6 +287,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapImageUrl={mapImageUrl}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
+        pageFooter={pageId === site.rootNotionPageId ? null : (config.disqusShortname ? disqus : null)}
         footer={footer}
       />
 

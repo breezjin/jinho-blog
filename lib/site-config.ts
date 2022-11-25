@@ -19,6 +19,8 @@ export interface SiteConfig {
   mastodon?: string
   instagram?: string
 
+  disqusShortname?: string | null
+
   defaultPageIcon?: string | null
   defaultPageCover?: string | null
   defaultPageCoverPosition?: number | null
