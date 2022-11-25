@@ -53,6 +53,18 @@ export const FooterImpl: React.FC = () => {
       </div>
 
       <div className={styles.social}>
+      {config.github && (
+          <a
+            className={styles.github}
+            href={`https://github.com/${config.github}`}
+            title={`GitHub @${config.github}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaGithub />
+          </a>
+        )}
+
         {config.twitter && (
           <a
             className={styles.twitter}
@@ -85,18 +97,6 @@ export const FooterImpl: React.FC = () => {
             rel='noopener noreferrer'
           >
             <FaZhihu />
-          </a>
-        )}
-
-        {config.github && (
-          <a
-            className={styles.github}
-            href={`https://github.com/${config.github}`}
-            title={`GitHub @${config.github}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaGithub />
           </a>
         )}
 
