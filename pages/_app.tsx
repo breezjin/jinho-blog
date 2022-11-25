@@ -35,6 +35,22 @@ if (!isServer) {
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
+  const handleKeyPress = React.useCallback((event) => {
+    if(event.key === 'Q' || event.key === 'q') {
+      window.location.assign('https://www.notion.so/breezjin/cbd9a996fb5c49879a6363e5be6637d6?v=45900b588ce84fa1b3f60be930df94b4')
+    }
+  }, []);
+
+  React.useEffect(() => {
+    // attach the event listener
+    document.addEventListener('keydown', handleKeyPress);
+
+    // remove the event listener
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [handleKeyPress]);
+
   React.useEffect(() => {
     function onRouteChangeComplete() {
       if (fathomId) {
