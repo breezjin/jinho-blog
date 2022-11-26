@@ -11,7 +11,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'Jinho Blog',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
+  domain: 'jinho-blog.breez.fm',
   // domain: 'jinho.breez.fm',
   author: 'Yoon Jinho (a.k.a breezjin or Mike)',
 

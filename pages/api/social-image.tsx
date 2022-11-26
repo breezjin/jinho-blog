@@ -32,11 +32,11 @@ export default async function OGImage(req: NextRequest) {
       'content-type': 'application/json'
     }
   })
+
   if (!pageInfoRes.ok) {
     return new Response(pageInfoRes.statusText, { status: pageInfoRes.status })
   }
   const pageInfo: NotionPageInfo = await pageInfoRes.json()
-  console.log(pageInfo)
 
   const [interRegularFont, interBoldFont] = await Promise.all([
     interRegularFontP,
