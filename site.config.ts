@@ -3,7 +3,7 @@ import { siteConfig } from './lib/site-config'
 export default siteConfig({
   // the site's root Notion page (required)
   // rootNotionPageId: '7875426197cf461698809def95960ebf',
-  rootNotionPageId: '66f1ee3f56a44e46876f5c9a357db60f',
+  rootNotionPageId: 'Jinho-Blog-66f1ee3f56a44e46876f5c9a357db60f',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
@@ -61,11 +61,11 @@ export default siteConfig({
   navigationLinks: [
     {
       title: 'About',
-      pageId: '528d04235d98407b980817ac18f7a35a'
+      pageId: 'ce30f21b2c7f4ce98a069a897398f3b0'
     },
     {
       title: 'Contact',
-      pageId: '213b740cf7b64298bc71aaa317ffe511'
+      pageId: '8570b4835ad44722bc0fc1803f36fb50'
     }
   ]
 })
