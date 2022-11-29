@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   const handleKeyPress = React.useCallback((event) => {
     if(event.key === 'Q' || event.key === 'q' || event.key === 'ㅂ') {
-      window.location.assign('https://www.notion.so/breezjin/cbd9a996fb5c49879a6363e5be6637d6?v=45900b588ce84fa1b3f60be930df94b4')
+      window.location.assign('https://www.notion.so/breezjin/4ffbbe83167f47eeb9e27bc4a1db1186?v=605ddaed65a44af5ac2430616f5ad2f5')
     }
   }, []);
 
