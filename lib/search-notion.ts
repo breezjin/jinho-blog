@@ -9,7 +9,7 @@ import { api } from './config'
 export const searchNotion = pMemoize(searchNotionImpl, {
   cacheKey: (args) => args[0]?.query,
   /** 캐시 타이밍 체크 */
-  cache: new ExpiryMap(20000)
+  cache: new ExpiryMap(60000)
   // cache: new ExpiryMap(10000)
 })
 
