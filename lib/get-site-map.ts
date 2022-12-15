@@ -10,12 +10,7 @@ import { notion } from './notion-api'
 
 const uuid = !!includeNotionIdInUrls
 /** 캐시 타이밍 체크 - 이건 사이트맵 */
-const cache = new ExpiryMap(60000)
-
-const getAllPages = pMemoize(getAllPagesImpl, {
-  cacheKey: (...args) => JSON.stringify(args),
-  cache
-})
+const cache = new ExpiryMap(10000)
 
 export async function getSiteMap(): Promise<types.SiteMap> {
   const partialSiteMap = await getAllPages(
@@ -28,6 +23,11 @@ export async function getSiteMap(): Promise<types.SiteMap> {
     ...partialSiteMap
   } as types.SiteMap
 }
+
+const getAllPages = pMemoize(getAllPagesImpl, {
+  cacheKey: (...args) => JSON.stringify(args),
+  cache
+})
 
 async function getAllPagesImpl(
   rootNotionPageId: string,
